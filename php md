@@ -111,3 +111,78 @@ var_dump($strtolower);
 echo "<br><hr>";
 echo str_word_count("я люблю обучаться PHP");
 //Посчитать количество всех символов исходной строки.
+Написать функцию, которая принимает на вход массив, а возвращает элементы массива отсортированные по возрастанию
+/$exp = explode(separator:"day", $rep);
+//var_dump($exp);
+//З массивы
+<?php
+$array = [
+    "name" => "Fred",
+    "remove" => True,
+    "additional_params" => [
+    "is_married" => false,
+    "country" => "France",
+    "born" => "10.09.1982"
+]
+];
+
+unset($array["additional_params"]);
+var_dump($array);
+echo "<br><hr>";
+//Удалить второй элемент из массива.
+$c= date("Y");
+$y= date("Y",strtotime("1982-09-10"));
+echo $c-$y;
+echo "<br><hr>";
+//Найти возраст пользователя (на сегодняшний день)
+print_r(array_keys($array));
+//Отсортировать массив по ключу (Использовать встроенные функции, без циклов!)
+
+unset($array["country"]);
+var_dump($array);
+$arraynew = ["country" => "France",
+"capital" => "Paris",
+"the time zone " => "+1"];
+$ar = array_replace($array, $arraynew);
+print_r($ar);
+echo "<br><hr>";
+//Добавить информацию о стране пользователя используя новый массив (название, столица, часовой пояс и пр.) и поместить данный массив вместо значения country 
+
+$chil = ["child” => null"];
+$newarray = array_merge($array, $chil);
+var_dump($newarray);
+echo "<br><hr>";
+//Объединить текущий массив с массивом [“child” => null] (встроенная функция объединения из занятия)
+ <?php
+$born = "10.09.1982";
+$bornn = explode( "." , $born);
+$newArr = [];
+for ($i = 0; $i < count($bornn); $i++) {
+if ($i == 0) { $newArr["day"] = $bornn[$i]; }
+if ($i == 1) { $newArr["month"] = $bornn[$i]; }
+if ($i == 2) { $newArr["year"] = $bornn[$i]; }
+}
+var_dump($newArr);
+
+
+
+
+
+//ДЗ по циклам
+//Написать функцию, которая принимает на вход массив из целых чисел и вычисляет их сумму
+$arrayck = [2, 4, 6, 8];
+echo array_sum($arrayck);
+//Написать функцию, которая принимает на вход массив первым аргументом и вторым аргументом что-то строковое. Проверить содержат ли элементы данного массива это число, завершить выполнение массива, если да.
+$t = 10
+$i = ["day","month"];
+if ($i = $t);
+else break;
+$array = [8, 12, 7, 11, 77, 5];
+//Написать функцию, которая принимает на вход массив, а возвращает элементы массива отсортированные по возрастанию
+function order($array, $ascOrDesc = 'asc') {
+    switch ($ascOrDesc) {
+        case 'asc':
+            sort($array);
+            break;
+        }
+    }
