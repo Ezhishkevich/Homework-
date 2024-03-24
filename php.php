@@ -211,4 +211,84 @@ $st = "/catalog/125/item-12/tovar-name";
 var_dump(preg_match("/([\da-z\.-]+).([a-z\.]{2,6})([\/\w\.-]*)*\/?$/", $st));
 Регулярное выражение для проверки УРЛа вида /catalog/125/item-12/tovar-name
 Урл адрес должен состоять из 4 выражений отделенными слешами, могут содержать спец символы -_№. Количество цифр может быть любым
+    
+
+
+Формы
+<?php
+?>
+<form action="Untitled-3.php" method="GET">
+<fieldset>
+<legend>Фамилия</legend>
+<p>
+<input name= "lastName" type="text" pattern="[A-Za-zА-Яа-яЁё]{3,}">
+
+</p>
+
+</fieldset>
+<fieldset>
+<legend>Имя</legend>
+<p>
+<input name= "firstName" type="text" pattern="[A-Za-zА-Яа-яЁё]{3,}">
+
+</p>
+
+</fieldset>
+<fieldset>
+<legend>Номер телефона,</legend>
+
+<p><input name= "tel" type="tel" pattern="[0-9]-[0-9]{3}-[0-9]{3}"></p>
+
+</fieldset>
+<fieldset>
+<legend>Адрес</legend>
+<p>
+<input name= "adress" type="text"pattern="[A-Za-zА-Яа-яЁё \s 0-9]{3,}">
+
+</p>
+
+</fieldset>
+<fieldset>
+<legend>Дата рождения</legend>
+<p>
+<input name="date" type="date"/>
+</p>
+
+</p>
+
+</fieldset>
+<fieldset>
+<legend> Email</legend>
+<p>
+<input name="emeil" type="email"/>
+</p>
+</fieldset>
+<p>
+<input type="submit"value= "Отправить">
+</p>
+</form>
+\\Untitled-3.php
+<?php
+var_dump($_GET);
+echo "<br><hr>";
+
+//Сохранить все данные анкеты в массив
+
+$c= date("Y");
+$y= date("Y",strtotime($_GET["date"]));
+echo $c-$y;
+echo "<br><hr>";
+//Написать функцию и вывести на экран возраст согласно даты рождения с анкеты
+$born = $_GET["adress"];
+$bornn = explode( " " , $born);
+$newArr = [];
+for ($i = 0; $i < count($bornn); $i++) {
+    if ($i == 0) { $newArr["country"] = $bornn[$i]; }
+    if ($i == 1) { $newArr["city"] = $bornn[$i]; }
+    if ($i == 2) { $newArr["street"] = $bornn[$i]; }
+    }
+
+var_dump($newArr);
+
+//Написать функцию, которая преобразует строку адреса в массив по типу:
 
