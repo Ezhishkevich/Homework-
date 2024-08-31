@@ -1,0 +1,16 @@
+{
+    "name": "use/php",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "php\\": "php"
+        },
+        "authors": [
+            {
+                "name": "Ezhishkev",
+                "email": "ezhishkevich@mail.ru"
+            }
+        ],
+        "require": {}
+    }
+}
