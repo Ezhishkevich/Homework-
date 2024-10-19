@@ -13,18 +13,6 @@
                     </div>
                     <div class="card-body">
 
-
-
-                        @if($errors->any())
-                        <div class="alert-dang">
-                            <ul>
-                                @foreach($errors->all() as $error)
-                                <li>{{$error}}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-
                         <form action="{{  route('contact-form')}}" method="post">
                             @csrf
                             <div class="mb-3 ">
