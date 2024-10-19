@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('page.titel')
-Создание Объявлениий
+Создание Объявлений
 @endsection
 @section('content')
 
@@ -14,19 +14,10 @@
                         <h4 class="m-0">@yield('page.titel')</h4>
                     </div>
                     <div class="card-body">
-                        @if($errors->any())
-                        <div class="alert-dang">
-                            <ul>
-                                @foreach($errors->all() as $error)
-                                <li>{{$error}}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
                         <form action="{{ route('сreatesubmit') }}" method="post">
                             @csrf
                             <div class="mb-3 ">
-                                <label>{{_('Заголовак')}}</label>
+                                <label>{{_('Заголовок')}}</label>
                                 <input name="heading" type="text" class=" form-control">
                             </div>
                             <div class="mb-3">
@@ -37,7 +28,7 @@
                                     <input name="author" class=" form-control">
                                 </div>
                                 <div class=" mb-3">
-                                    <label>{{_('Cсылка на изаброжение')}}</label>
+                                    <label>{{_('Cсылка на изображение')}}</label>
                                     <input name="img" class=" form-control">
                                 </div>
                                 <button type="submit" class="btn btn-primary">{{_('Создать')}} </button>
