@@ -15,7 +15,7 @@
                         <form action="{{ route('updatesubmit', $article->id) }}" method="post">
                             @csrf
                             <div class="mb-3 ">
-                                <label>{{_('Заголовак')}}</label>
+                                <label>{{_('Заголовок')}}</label>
                                 <input name="heading" value="{{$article->heading}}" type="text" class=" form-control">
                             </div>
                             <div class="mb-3">
