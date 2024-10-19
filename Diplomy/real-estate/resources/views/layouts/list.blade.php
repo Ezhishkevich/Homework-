@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('page.titel')
-Списак обьявлений
+Список обьявлений
 @endsection
 @section('content')
 <section>
