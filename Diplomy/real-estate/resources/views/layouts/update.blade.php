@@ -12,15 +12,6 @@
                         <h4 class="m-0">@yield('page.titel')</h4>
                     </div>
                     <div class="card-body">
-                        @if($errors->any())
-                        <div class="alert-dang">
-                            <ul>
-                                @foreach($errors->all() as $error)
-                                <li>{{$error}}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
                         <form action="{{ route('updatesubmit', $article->id) }}" method="post">
                             @csrf
                             <div class="mb-3 ">
