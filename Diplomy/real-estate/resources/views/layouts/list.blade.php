@@ -19,7 +19,7 @@
 
                         {{$el->heading}}
 
-                        <div class="btn"><a href=" {{ route('message',$el->id) }}"><button type="submit" class="btn btn-primary">Подробние</button></a></div>
+                        <div class="btn"><a href=" {{ route('message',$el->id) }}"><button type="submit" class="btn btn-primary">Подробнее</button></a></div>
                     </div>
 
 
