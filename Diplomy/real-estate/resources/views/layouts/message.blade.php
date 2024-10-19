@@ -20,7 +20,7 @@
 
 
         <div class="d-flex col-3 ">
-            <div class="btn"><a href="{{ route('update', $article->id) }}"><button type="submit" class="btn btn-primary">Обнавить</button></a></div>
+            <div class="btn"><a href="{{ route('update', $article->id) }}"><button type="submit" class="btn btn-primary">Обновить</button></a></div>
             <div class="btn mx-1"><a href="{{ route('list')}}"><button type="submit" class="btn btn-primary">назад</button></a></div>
         </div>
     </div>
