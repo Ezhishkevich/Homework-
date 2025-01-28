@@ -47,6 +47,6 @@ require_once "vendor/autoload.php";
 
             <button type="submit" class="send-message">Войти </button>
 
-        </form>
+        </form
     </div>
 </div>
